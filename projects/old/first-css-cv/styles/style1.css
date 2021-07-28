@@ -1,0 +1,486 @@
+/*
+  On commence par un RESET CSS qui permet de réinitialiser les styles par défaut
+  du navigateur. Cette opération a pour objectif de réduire les différences entre
+	navigateur concernant les marges, la taille de la police des titres, la hauteur
+	des lignes, etc.
+*/
+
+
+/*
+	http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/***********************************************************************************
+ ************                DEBUT DE LA FEUILLE DE STYLE               ************
+ ***********************************************************************************/
+
+
+/**************************************************
+       Style commun à toutes les pages du site
+**************************************************/
+
+body {
+    /* Style de police */
+		font-family: Didot, serif; /* Helvetica ou à défaut une police sans sérif */
+		font-size: 20px;
+		font-weight: 400;
+    line-height: 1.4;
+    /* Couleur de fond */
+    background: #ECEFF1; /* For browsers that do not support gradients */
+    /* background: -webkit-linear-gradient(0deg, #D0D0D0, #FAFAFA); /* For Safari 5.1 to 6.0 */
+    /* background: -o-linear-gradient(0deg, #D0D0D0, #FAFAFA); /* For Opera 11.1 to 12.0 */
+    /* background: -moz-linear-gradient(0deg, #D0D0D0, #FAFAFA); /* For Firefox 3.6 to 15 */
+
+		/* Standard syntax */
+		/* #D0D0D0 : gris foncé, #FAFAFA : gris clair. Si angle = 0deg : bas vers haut, si pas
+		d'angle, par défaut haut vers bas */
+		/* background: linear-gradient(0deg, #D0D0D0, #FAFAFA);
+
+    /* Définition d'une variable CSS pour factoriser la couleur bleu foncé partout. Ici
+		on procède à son initialisation, on pourra l'utiliser via var(--couleur) comme valeur
+		d'une propriété color par ex. */
+    --couleur: #004D40;
+}
+
+/*********************************
+        Corps de la page
+ *********************************/
+main {
+    margin: 50px auto 0 auto; /* marge externes, top : 50px, marge bot : 0px et
+		on centre le bloc en automatisant les marges gauche et droite */
+    background: #ECEFF1;
+    min-height: 500px;
+    max-width: calc(100% - 460px);
+    padding: 10px 10px 20px 10px;
+    border-left: solid 2px var(--couleur);
+    border-right: solid 2px var(--couleur);
+}
+
+#logo {
+	animation: imagelol 2.5s forwards;
+}
+
+@keyframes imagelol {
+	from {
+		opacity: 0.95;
+		transform: scale(0);
+	}
+	to {
+		opacity: .95;
+		transform: scale(1);
+	}
+}
+
+figure + p {
+	text-align: justify;
+	font-style: italic;
+	font-size: 0.9em;
+	width: 94%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+p {
+    padding: 5px 10px; /* marges internes : 5px sur la verticale, 10px sur l'horizontale */
+    text-align: justify;
+		margin-bottom: 15px;
+}
+
+/** Titres */
+
+h1 {
+    color: var(--couleur);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 20px 30px;
+}
+
+h2 {
+		text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+    line-height: 26px;
+    color: #ECEFF1;
+    padding: 5px 10px;
+    background-color: var(--couleur);
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: solid 2px var(--couleur);
+}
+
+#formation h3, #experiences h3 {
+	font-variant: small-caps;
+	font-size: 20px;
+}
+
+/** Pied de page **/
+/* S1 > S2 : sélecteur d'enfant, ici tous les éléments footer qui ont un parent body */
+body > footer {
+    height: 40px;
+    background-color: var(--couleur);
+    color: #ECEFF1;
+}
+
+/* S1 S2 : sélecteur de descendants, ici tous les éléments li qui ont un ancêtre footer */
+body > footer li {
+    display: inline-block; /* affiche sous la forme d'une ligne des éléments en bloc à l'origine */
+    width: 33%;
+    line-height: 40px;
+    text-align: center;
+		color: #ECEFF1;
+		font-variant: small-caps;
+    font-size: 100%;
+/*	Pour centrer verticalement le texte dans une boîte, on définit la valeur de la propriété line-height
+égale à celle de la propriété height de l'élément */
+}
+
+body > footer a:link,
+body > footer a:visited {
+    color: #ECEFF1;
+}
+body > footer a:link:hover,
+body > footer a:visited:hover {
+    color: #8D6E63;
+}
+
+/** Liens **/
+
+a:link, a:visited {
+    color: var(--couleur);
+    font-weight: bold;
+    text-decoration: none; /* retire le soulignage par défaut des liens */
+}
+
+a:hover {
+    text-decoration: bold;
+		color: #8D6E63;
+;
+
+}
+a[href^=http]:hover { /* pour les liens externes sur lesquels on passe la souris */
+    padding-right: 20px; /* pour laisser de la place à l'image afin qu'elle ne
+		s'affiche pas sous le texte */
+    background: url(../images/lien_externe.gif) right center no-repeat;
+		/* positionne l'image sur la droite de façon centrée et une seule fois */
+}
+a[href^=http]:hover::after { /* pour les liens externes sur lesquels on passe la souris,
+	on positionne après eux leur lien url de la façon suivante : */
+    content: " (" attr(href) ")"; /* le contenu est l'url en question grâce à attr() */
+							
+							
+				/* on laisse un espace pour plus de visibilité */
+}
+
+
+/**********************************************************
+    Styles spécifiques aux pages formation & experiences & contact
+**********************************************************/
+
+/* Pied des articles, en bas de page, sur toute la largeur */
+article footer {
+    position: relative;
+    width: 80%;
+    margin: 10px auto 10px auto;
+    clear: both;
+		/* indique si un élément peut être situé à côté d'éléments flottants qui le précèdent
+		ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments, both :
+		l'élément est déplacé vers le bas afin de dégager les flottements à gauche et à droite */
+    box-sizing: border-box;
+		/* border-box indique au navigateur de prendre en compte la bordure et le remplissage
+		dans la valeur définie pour la largeur et la hauteur du bloc enfant */
+    background-color: lightyellow;
+    border: solid 1px #000;
+    /* on laisse une marge interne de 200px à gauche pour permettre de placer le logo */
+    padding: 5px 10px 5px 200px;
+    min-height: 40px;
+    text-align: justify;
+}
+/* Pseudo-élement ::before utilisé pour afficher le logo */
+article footer::before {
+    background-image: url(../images/logo.png);
+    background-size: cover;
+		/*
+		background-size : définit la taille des images d'arrière-plan pour l'élément
+		cover : l'image est redimensionnée pour être aussi grande que possible et pour conserver ses
+		proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui
+		dépassent sont rognées si les proportions du conteneur sont différentes
+		*/
+    content: ' ';
+		/* Si on utilise width et height pour un content: url(...), ceux-ci sont inopérants :
+		la taille de l'image sera celle du fichier d'origine, sans possibilité de la modifier
+		Pour pallier ce problème, il faut : déclarer un pseudo-bloc vide ( content: ' '; )
+		de la taille désirée ( width: ..px; height: ..px; ), et donner l'image comme fond de ce
+		pseudo-élément ( background-image: url(...); ) en précisant que l'image de fond prend
+		toute la taille de l'élément ( background-size: 100% 100%; ) */
+    left: 5px;
+    width: 188px;
+    height: 25px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		/*
+		L'astuce est de donner une taille au bloc (en pixels par exemple). Ensuite, il faut centrer ce
+		bloc verticalement. Il y a une technique qui marche à tous les coups :
+		- positionner le bloc en absolu, à 50% du haut de son conteneur, puis
+		- effectuer une translation vers le haut de la moitié de la hauteur du pseudo-element. */
+}
+
+/** Images alternant dans les articles à gauche et à droite */
+#formation article img,
+#experiences article img {
+    width: auto;
+    margin-bottom: 20px;
+}
+
+#formation article:nth-child(odd) img,
+#experiences article:nth-child(odd) img {
+    float: left;
+    margin-right: 20px;
+}
+#formation article:nth-child(even) img,
+#experiences article:nth-child(even) img {
+    float: right;
+    margin-left: 20px;
+}
+
+/* even : représente les éléments dont la position est paire par rapport à leurs voisins. */
+/* odd : représente les éléments dont la position est impaire par rapport à leurs voisins. */
+/* n commence à 0 et 0 est paire */
+
+/* Affichage de la carte : l'image sera sur le fond de la zone */
+#carte {
+    position: relative;
+    width: 700px;
+    margin: 20px auto;
+    background-size: cover;
+}
+
+/* Affichage des petites épingles (rouge de base, verte au survol) */
+#carte > a {
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 35px;
+    background: url("../images/red-pin.png") no-repeat top left;
+}
+#carte > a:hover {
+    background: url("../images/green-pin.png") no-repeat top left;
+}
+
+/* Affichage de l'info-bulle dans le pseudo-élément ::before
+    dont le contenu est donné par l'attribut "data-caption".
+    Positionnement par défaut au dessus de l'épingle.
+*/
+#carte > a::before {
+    content: attr(data-caption);
+    position: absolute;
+    display: none; /* pas d'affichage par défaut */
+    background-color: lightyellow;
+    border: solid 1px #000;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: black;
+    font-weight: normal;
+		top: -30px;
+    left: -75px;
+    z-index: 1;
+    width: 150px;
+}
+/* affichage au survol */
+#carte a:hover::before {
+    display: block;
+}
+
+
+/* Carte du formation (image + épingles) */
+
+#formation #carte {
+    /* Mise à l'échelle de la carte (image d'origine en 1169*1007 : width*height )*/
+    height: calc(700px * 800 / 929); /* produit en croix pour trouver la hauteur en px */
+    background-image: url(../images/france.jpg);
+}
+
+/* placements des points pour la carte du formation */
+
+#formation #carte > a:nth-of-type(1) {
+    left: 70%;
+    top: 36%;
+}
+#formation #carte > a:nth-of-type(2) {
+    left: 65%;
+    top: 75%;
+}
+#formation #carte > a:nth-of-type(3) {
+    left: 57%;
+    top: 73%;
+}
+#formation #carte > a:nth-of-type(4) {
+    left: 56%;
+    top: 73%;
+}
+#formation #carte > a:nth-of-type(4)::before {
+    top: 40px;
+}
+
+
+/** Carte de la experiences (image + épingles) */
+
+#experiences #carte {
+    height: calc(700px * 704 / 848);
+    background-image: url(../images/mtp.png);
+}
+/* Placement des points sur la carte de la experiences */
+#experiences #carte > a:nth-of-type(1) {
+    top: 30%;
+    left: 26%;
+}
+#experiences #carte > a:nth-of-type(2) {
+    top: 90%;
+    left: 92%;
+}
+#experiences #carte > a:nth-of-type(3) {
+    top: 90%;
+    left: 94%;
+}
+#experiences #carte > a:nth-of-type(4) {
+    top: 60%;
+    left: 66%;
+}
+#experiences #carte > a:nth-of-type(5) {
+    top: 40%;
+    left: 40%;
+}
+/* Comme ce point est trop proche du haut de la carte, on
+    déplace son info-bulle sur la gauche et vers le bas */
+#experiences #carte > a:nth-of-type(5):before {
+    top: 20px;
+    left: -180px;
+}
+
+/*****************************************************
+      Styles spécifiques à la page de competences
+ *****************************************************/
+
+#competences section {
+    position: relative;
+}
+
+/* Définition du bloc d'article : 30% de la largeur de ligne, 350px de haut */
+#competences article {
+    display: block;
+    position: relative;
+    width: 30%;
+    margin: 10px;
+    height: 350px;
+    background: #ECEFF1;
+    text-align: left;
+		font-size: 15px;
+    border-radius: 0 20px 0 20px;
+    box-shadow: 0px 0px 20px #999; /* pas de décalage horizontal ni vertical de
+		l'ombre, seulement un adoucissement de 20 px qui provoque l'effet visuel */
+}
+
+/* Affichage des lignes de produits avec des boites flexibles.
+  Placement en ligne horizontale, avec un espacement identique tout autour. */
+#competences .ligne {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Titre des articles : surcharge des titres h3 classiques (sélecteur avec
+    plus de poids que h3 seul donc il est prioritaire */
+#competences article h3 {
+    border: none; /* pour enlever la bordure inférieure précédemment mise */
+    margin: 0;
+    padding: 10px;
+		font-size: 18px;
+		font-variant: small-caps;
+}
+
+/* Au survol, affichage d'une ombre bleue foncée */
+#competences article:hover {
+    box-shadow: 0px 0px 20px var(--couleur);
+}
+
+/* Les images dans les articles sont affichées en block
+    ce qui permet de les centrer avec des marges auto */
+#competences article img {
+    display: block;
+    width: auto;
+    float: none; /* valeur par défaut */
+    height: 150px;
+    margin: 5px auto;
+}
+
+/* Le niveau est positionné en bas à droite du bloc, initialement invisible */
+#competences article .niveau {
+		text-align: right;
+		font-size: 15px;
+    color: var(--couleur);
+    font-weight: bold;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+}
+/* Au survol, il s'affiche. */
+#competences article:hover .niveau {
+    visibility: visible;
+}

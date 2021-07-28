@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1d061a;
+}
+
+h1 {
+  font-size: 4rem;
+  background-image: linear-gradient(to right, #ff0058 , #4dff03);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.container .box {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  margin: 60px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.container .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  transform: skewX(20deg);
+  transition: 0.5s;
+}
+
+.container .box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(20px);
+}
+
+.container .box:hover:before,
+.container .box:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after {
+  background: linear-gradient(315deg, #3bc002, #00afd6);
+}
+
+.container .box span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.container .box span:before {
+  content: "tell me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .box:hover span:before {
+  top: -50px;
+  left: 0px;
+  width: 75px;
+  height: 75px;
+  opacity: 1;
+}
+
+.container .box span:after {
+  content: "something";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  animation-delay: -1s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .box:hover span:after {
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.container .box .content {
+  position: relative;
+  left: 0;
+  padding: 20px 20px;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  color: #ffffff;
+  z-index: 1;
+  width: 85%;
+}
+
+.container .box:hover .content {
+  left: -25px;
+  padding: 60px 30px;
+}
+
+.container .box .content h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.container .box .content p {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+}
+
+.container .box .content a {
+  display: inline-block;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 13px 10px 10px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover {
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+  font-size: 1em;
+  border: solid 0.05px;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
