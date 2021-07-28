@@ -9,7 +9,6 @@ body {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #1d061a;
 }
 
@@ -23,15 +22,28 @@ h1 {
   padding: 40px 0 0 0;
 }
 
-.container {
+/*****************************************************************************************************************/
+/*                                                  GLOWING CARDS SECTION                                        */
+/*****************************************************************************************************************/
+
+
+.glowing {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 40px 0;
 }
 
-.container .box {
+.glowing {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.glowing .box {
   position: relative;
   width: 320px;
   height: 400px;
@@ -42,7 +54,7 @@ h1 {
   transition: 0.5s;
 }
 
-.container .box:before {
+.glowing .box:before {
   content: "";
   position: absolute;
   top: 0;
@@ -55,7 +67,7 @@ h1 {
   transition: 0.5s;
 }
 
-.container .box:after {
+.glowing .box:after {
   content: "";
   position: absolute;
   top: 0;
@@ -69,29 +81,29 @@ h1 {
   filter: blur(20px);
 }
 
-.container .box:hover:before,
-.container .box:hover:after {
+.glowing .box:hover:before,
+.glowing .box:hover:after {
   transform: skewX(0deg);
   left: 20px;
   width: calc(100% - 90px);
 }
 
-.container .box:nth-child(1):before,
-.container .box:nth-child(1):after {
+.glowing .box:nth-child(1):before,
+.glowing .box:nth-child(1):after {
   background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
 
-.container .box:nth-child(2):before,
-.container .box:nth-child(2):after {
+.glowing .box:nth-child(2):before,
+.glowing .box:nth-child(2):after {
   background: linear-gradient(315deg, #03a9f4, #ff0058);
 }
 
-.container .box:nth-child(3):before,
-.container .box:nth-child(3):after {
+.glowing .box:nth-child(3):before,
+.glowing .box:nth-child(3):after {
   background: linear-gradient(315deg, #3bc002, #00afd6);
 }
 
-.container .box span {
+.glowing .box span {
   display: block;
   position: absolute;
   top: 0;
@@ -102,7 +114,7 @@ h1 {
   pointer-events: none;
 }
 
-.container .box span:before {
+.glowing .box span:before {
   content: "tell me";
   position: absolute;
   top: 0;
@@ -121,7 +133,7 @@ h1 {
   justify-content: center;
 }
 
-.container .box:hover span:before {
+.glowing .box:hover span:before {
   top: -50px;
   left: 0px;
   width: 75px;
@@ -129,7 +141,7 @@ h1 {
   opacity: 1;
 }
 
-.container .box span:after {
+.glowing .box span:after {
   content: "something";
   position: absolute;
   bottom: 0;
@@ -149,7 +161,7 @@ h1 {
   justify-content: center;
 }
 
-.container .box:hover span:after {
+.glowing .box:hover span:after {
   bottom: -50px;
   right: 50px;
   width: 100px;
@@ -167,7 +179,7 @@ h1 {
   }
 }
 
-.container .box .content {
+.glowing .box .content {
   position: relative;
   left: 0;
   padding: 20px 20px;
@@ -181,24 +193,25 @@ h1 {
   width: 85%;
 }
 
-.container .box:hover .content {
+.glowing .box:hover .content {
   left: -25px;
   padding: 60px 30px;
 }
 
-.container .box .content h2 {
+.glowing .box .content h2 {
   font-size: 1.5em;
   color: #ffffff;
   margin-bottom: 10px;
 }
 
-.container .box .content p {
+.glowing .box .content p {
   font-size: 1em;
   line-height: 1.4em;
   margin-bottom: 10px;
 }
 
-.container .box .content a {
+.glowing .box .content a {
+  border: 0.5px solid transparent;
   display: inline-block;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.85);
@@ -210,7 +223,7 @@ h1 {
   margin-top: 5px;
 }
 
-.container .box .content a:hover {
+.glowing .box .content a:hover {
   letter-spacing: 0.5px;
   transition: 0.5s;
   font-size: 1em;
@@ -218,4 +231,188 @@ h1 {
   color: rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*****************************************************************************************************************/
+/*                                                  SHINING CARDS SECTION                                        */
+/*****************************************************************************************************************/
+
+.shining {
+  background: #08001b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.shining .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 50px;
+  background: #0c002b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.shining:hover .card {
+  opacity: 0.66;
+}
+
+.shining .card:hover {
+  opacity: 1;
+}
+
+
+.shining .card:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.shining .card .content {
+  padding: 30px;
+  text-align: center;
+}
+
+.shining .card .content h2 {
+  position: absolute;
+  top: 100px;
+  height: 100px;
+  right: 10px;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: #1779ff;
+  z-index: 1;
+  visibility: hidden;
+  transition: 0.5s ;
+}
+
+.shining .card:hover .content h2 {
+  opacity: 1;
+  transform: translateY(-60px);
+  visibility: visible;
+}
+
+.shining .card .content h3 {
+  position: relative;
+  font-size: 2em;
+  font-weight: 800;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  padding-bottom: 0px;
+} 
+
+.shining .card .content p {
+  position: relative;
+  font-size: 1em;
+  font-weight: 300;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+
+.shining .card:hover .content h3,.shining .card:hover .content p {
+  opacity: 1;
+}
+
+.shining .card .content a {
+  border: 0.5px solid transparent;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 15px 8px 15px;
+  background: rgba(255,255,255,0.75);
+  color: #0c002b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.shining .card .content a:hover {
+  background: rgba(255,255,255,0.25);
+  border: solid 0.5px #fff;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.shining .card span {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.shining .card:hover span {
+  opacity: 1;
+}
+.shining .card span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #1779ff);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(100%);}
+}
+
+.shining .card span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, #1779ff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(100%);}
+}
+
+.shining .card span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, #1779ff);
+  animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+.shining .card span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to top, transparent, #1779ff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(-100%);}
 }
