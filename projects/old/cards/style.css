@@ -11,6 +11,22 @@ body {
   background-color: #1d061a;
 }
 
+/* scrollbar */
+
+body::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #404346;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #91720fcb;
+  border: solid 3.5px #404346;
+}
+
 h1 {
   font-size: 4rem;
   background-image: linear-gradient(to right, #ff0058 , #4dff03);
