@@ -524,7 +524,7 @@ transform: translate(calc(-50% + calc(350px * 0.5 * var(--i))), -50%) rotate(0de
   transition: 0.5s;
   transform: translateY(50px);
   padding: 25px;
-  text-align: center;
+  height: 100%;
 }
 
 .container:hover .card .content {
@@ -537,4 +537,34 @@ transform: translate(calc(-50% + calc(350px * 0.5 * var(--i))), -50%) rotate(0de
   padding-bottom: 30px;
   font-style: italic;
   font-size: 2em;
+  text-align: center;
+}
+.stacked .container .card .content p {
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.stacked .container .card .content a {
+  border: 0.5px solid transparent;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px 8px 15px;
+  background: rgba(255,255,255,0.75);
+  color: #00071b;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stacked .container:hover .card .content a {
+  margin-top: 30px;
+}
+
+.stacked .container .card .content a:hover {
+  background: rgba(255,255,255,0.25);
+  border: solid 0.5px #cdd2df;
+  color: #edeff5;
+  font-weight: 400;
 }
