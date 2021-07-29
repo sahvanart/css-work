@@ -6,7 +6,6 @@
 }
 
 body {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   background-color: #1d061a;
@@ -22,12 +21,29 @@ h1 {
   padding: 40px 0 0 0;
 }
 
+h2 {
+  color: rgba(255, 255, 255, 0.712);
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.shining h2 {
+  align-self: flex-start;
+}
+
+.stacked h2 {
+  transform: translateX(-100px);
+}
+
+
+
 /*****************************************************************************************************************/
 /*                                                  GLOWING CARDS SECTION                                        */
 /*****************************************************************************************************************/
 
 
 .glowing {
+  padding-bottom: 100px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -298,7 +314,7 @@ h1 {
 
 .shining .card:hover .content h2 {
   opacity: 1;
-  transform: translateY(-60px);
+  transform: translateY(-80px);
   visibility: visible;
 }
 
@@ -415,4 +431,94 @@ h1 {
 @keyframes animate4 {
     0% {transform: translateY(100%);}
     100% {transform: translateY(-100%);}
+}
+
+/*****************************************************************************************************************/
+/*                                                  STACKED CARDS SECTION                                        */
+/*****************************************************************************************************************/
+
+.stacked {
+  background: #00071b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  width: 1100px;
+  height: 550px;
+}
+
+.container .card {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: 50%;
+  transform: translate(-50%, calc(100px * 0.5 * var(--i))) rotate(40deg) skew(-20deg, -10deg);
+  width: 300px;
+  height: 400px;
+  background: rgb(124, 92, 4);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 25px 25px 100px rgba(0,0,0,0.2);
+  z-index: calc(-1 * var(--i));
+  transition: 0.5s;
+}
+
+.container .card:nth-child(1){
+  opacity: 1;
+}
+
+.container .card:nth-child(2){
+  opacity: 0.9;
+}
+
+.container .card:nth-child(3){
+  opacity: 0.8;
+}
+
+.container:hover .card {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  z-index: 1;
+  opacity: 1;
+  box-shadow: 0px 25px 50px rgba(0,0,0,0.2);
+}
+
+.container:hover .card:nth-child(1) {
+transform: translate(calc(-50% + calc(350px * 0.5 * var(--i))), -50%) rotate(0deg) skew(0deg, 0deg);
+}
+
+.container:hover .card:nth-child(2) {
+  transform: translate(calc(-50% + calc(350px * 0 * var(--i))), -50%) rotate(0deg) skew(0deg, 0deg);
+}
+
+.container:hover .card:nth-child(3) {
+  transform: translate(calc(-50% + calc(350px)), -50%) rotate(0deg) skew(0deg, 0deg);
+}
+
+.container .card .content {
+  color: #cdd2df;
+  opacity: 0.33;
+  transition: 0.5s;
+  transform: translateY(50px);
+  padding: 25px;
+  text-align: center;
+}
+
+.container:hover .card .content {
+  opacity: 1;
+  transform: translateY(0px); 
+  transition-delay: calc(0.3s * var(--j));
+}
+
+.stacked .container .card .content h3 {
+  padding-bottom: 30px;
+  font-style: italic;
+  font-size: 2em;
 }
