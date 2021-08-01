@@ -38,7 +38,7 @@ if (!isset($_SESSION['user'])) {
 // la méthode GET
 if (count($_POST) == 0){
     fd_entete('Commentaires', '../styles/eResto.css');
-    fd_menu('..', $_SESSION['user']['login']);
+    fd_menu('Commentaires', '..', $_SESSION['user']['login']);
     
     echo    '<h4 style="text-align: center;">Erreur</h4>',
             '<p style="min-height: 300px;">',
@@ -131,7 +131,7 @@ $conn->close();
 // affichage de l'entête
 fd_entete('Commentaires', '../styles/eResto.css');
 
-fd_menu('..', $_SESSION['user']['login']);
+fd_menu('Commentaires', '..', $_SESSION['user']['login']);
 
 fdl_contenu($data, $resultat_form1, $resultat_form_photo);
 

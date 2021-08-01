@@ -82,8 +82,7 @@ function fd_entete($titre, $css) {
                 '<link rel="stylesheet" type="text/css" href="', $css, '">', 
             '</head>', 
             '<body>',
-                '<main>',
-                    '<header>';
+                '<main>';
                         
 }
 
@@ -98,26 +97,27 @@ function fd_entete($titre, $css) {
 */
 function fd_menu($titre, $prefixe, $connecte) {
     echo 
-                        '<div class="menu">',
-                        '<input type="checkbox" id="nav-toggle" class="nav-toggle">',
-                            '<nav>',
-                                '<ul>',
-                                    '<li><a href="', $prefixe, '/index.php">Accueil</a></li>',
-                                    '<li><a href="', $prefixe, '/php/menu.php">Menus et repas</a></li>',
-                                    (($connecte) 
-                                    ? "<li><a href='{$prefixe}/php/profil.php'>Mon profil</a></li><li><a href='{$prefixe}/php/deconnexion.php'>Déconnexion [{$connecte}]</a></li>" 
-                                    : "<li><a href='{$prefixe}/php/connexion.php'>Connexion</a></li>"
-                                    ),
-                                '</ul>',  
-                            '</nav>',
-                            '<label for="nav-toggle" class="nav-toggle-label"><span></span></label>',
-                        '</div>',    
-                    '</header>',
-                    '<div class="welcome-background">',
-                    '<h1>', $titre, '</h1>',
-                        '<a href="http://www.crous-bfc.fr" target="_blank"></a>',
-                        '<a href="http://www.univ-fcomte.fr" target="_blank"></a>',
-                    '</div>';
+    '<header>',
+        '<div class="menu">',
+        '<input type="checkbox" id="nav-toggle" class="nav-toggle">',
+            '<nav>',
+                '<ul>',
+                    '<li><a href="', $prefixe, '/index.php">Accueil</a></li>',
+                    '<li><a href="', $prefixe, '/php/menu.php">Menus</a></li>',
+                    (($connecte) 
+                    ? "<li><a href='{$prefixe}/php/profil.php'>Mon profil</a></li><li><a href='{$prefixe}/php/deconnexion.php'>Déconnexion [{$connecte}]</a></li>" 
+                    : "<li><a href='{$prefixe}/php/connexion.php'>Connexion</a></li>"
+                    ),
+                '</ul>',  
+            '</nav>',
+            '<label for="nav-toggle" class="nav-toggle-label"><span></span></label>',
+        '</div>',    
+    '</header>',
+    '<div class="welcome-background">',
+    '<h1>', $titre, '</h1>',
+        '<a href="http://www.crous-bfc.fr" target="_blank"></a>',
+        '<a href="http://www.univ-fcomte.fr" target="_blank"></a>',
+    '</div>';
 }
 
 

@@ -26,7 +26,7 @@ else{
 // génération de la page
 fd_entete('Inscription', '../styles/eResto.css');
 
-fd_menu('..', false);
+fd_menu('Inscription', '..', false);
 
 fdl_contenu($erreurs);
 

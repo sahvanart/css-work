@@ -68,7 +68,7 @@ $conn->close();
 // affichage de la page profil.php
 fd_entete('Mon profil', '../styles/eResto.css');
 
-fd_menu('..', $_SESSION['user']['login']);
+fd_menu('Mon profil', '..', $_SESSION['user']['login']);
 
 // se reporter aux définitions des fonctions 
 sll_affich_id($resultat_form_id, $statistiques);

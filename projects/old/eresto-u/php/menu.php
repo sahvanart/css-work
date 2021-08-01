@@ -46,7 +46,7 @@ else {
 // affichage de l'entête
 fd_entete('Menus et repas', '../styles/eResto.css');
 // affichage du menu
-fd_menu('..', isset($_SESSION['user']) ? $_SESSION['user']['login']: false);
+fd_menu('Menus et repas', '..', isset($_SESSION['user']) ? $_SESSION['user']['login']: false);
 
 // contenu de la page 
 fdl_contenu($conn, $resultat);
