@@ -44,9 +44,9 @@ else {
 ---------------------------------------------------------------------*/
 
 // affichage de l'entête
-fd_entete('Menus et repas', '../styles/eResto.css');
+fd_entete('Menus', '../styles/eResto.css');
 // affichage du menu
-fd_menu('Menus et repas', '..', isset($_SESSION['user']) ? $_SESSION['user']['login']: false);
+fd_menu('Menus', '..', isset($_SESSION['user']) ? $_SESSION['user']['login']: false);
 
 // contenu de la page 
 fdl_contenu($conn, $resultat);
@@ -595,4 +595,3 @@ function fdl_afficher_commentaires($conn, $date, $commOK) {
         echo '</article>';        
     }
 }
-?>
