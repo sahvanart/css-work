@@ -30,7 +30,7 @@ fd_menu('Connexion', '..', false); // false car cette page n'est pas accessible 
 
 fdl_contenu($erreur);
 
-fd_pied_de_page();
+fd_pied_de_page('..', false);
 
 ob_end_flush();
 
@@ -174,4 +174,3 @@ function fdl_traitement_connexion() {
     header("location: {$_POST['redirection']}");
     exit(); // à ne pas oublier
 }
-?>

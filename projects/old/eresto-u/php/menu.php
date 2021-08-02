@@ -54,7 +54,7 @@ fdl_contenu($conn, $resultat);
 $conn->close();
 
 // affichage du pied de page
-fd_pied_de_page();
+fd_pied_de_page('..', isset($_SESSION['user']) ? $_SESSION['user']['login'] : false);
 
 // fin du script --> envoi de la page 
 ob_end_flush();

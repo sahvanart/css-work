@@ -19,7 +19,7 @@ fd_menu('Accueil', '.', isset($_SESSION['user']) ? $_SESSION['user']['login'] : 
 fdl_contenu();
 
 // pied de page
-fd_pied_de_page();
+fd_pied_de_page('.', isset($_SESSION['user']) ? $_SESSION['user']['login'] : false);
 
 // envoi du buffer
 ob_end_flush();

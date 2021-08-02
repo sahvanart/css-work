@@ -75,7 +75,7 @@ sll_affich_id($resultat_form_id, $statistiques);
 sll_affich_mdp($resultat_form_pass);
 sll_affich_stat($statistiques);
 
-fd_pied_de_page();
+fd_pied_de_page('..', $_SESSION['user']['login']);
 
 // fin du script --> envoi de la page 
 ob_end_flush();
@@ -285,4 +285,3 @@ function sll_recup_stat($conn) {
 
     return $stats;                
 }
-?>

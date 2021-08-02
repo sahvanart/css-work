@@ -30,7 +30,7 @@ fd_menu('Inscription', '..', false);
 
 fdl_contenu($erreurs);
 
-fd_pied_de_page();
+fd_pied_de_page('..', false);
 
 ob_end_flush();
 
@@ -274,4 +274,3 @@ function fdl_traitement_inscription() {
     header('location: ../index.php');
     exit(); // Fin du script
 }
-?>

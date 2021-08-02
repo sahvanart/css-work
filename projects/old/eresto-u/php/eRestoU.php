@@ -83,6 +83,7 @@ function fd_entete($titre, $css)
     '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
     '<title>eRestoU | ', $titre, '</title>',
     '<link rel="stylesheet" type="text/css" href="', $css, '">',
+    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">',
     '</head>',
     '<body>',
     '<main>';
@@ -126,12 +127,15 @@ function fd_menu($titre, $prefixe, $connecte)
 /**
  *  Génération du pied de page. 
  */
-function fd_pied_de_page()
+function fd_pied_de_page($prefixe, $connecte)
 {
     echo '<footer>',
-    '<div>&copy; sahvanart 2020</div>',
-    '<div>Université de Franche-Comté - CROUS de Franche-Comté</div>',
-    '<div>mail git twitter</div>',
+    '<p>&copy; 2020 sahvanart</p>',
+    '<p>',
+    '<a href="mailto:sahvanart@gmail.com?subject=Web%20Dev%20Contact"><i class="fa fa-envelope"></i></a>',
+    '<a href="https://github.com/sahvanart" target="new_blank"><i class="fa fa-github"></i></a>',
+    '<a href="https://twitter.com/sahvanart" target="new_blank"><i class="fa fa-twitter"></i></a>',
+    '</p>',
     '</footer>',
     '</main>',
     '</body>',

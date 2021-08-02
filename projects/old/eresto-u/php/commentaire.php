@@ -47,7 +47,7 @@ if (count($_POST) == 0){
             'Vous pouvez y accéder à partir des liens de la page menu.php.',
             '</p>';
     
-    fd_pied_de_page();
+    fd_pied_de_page('..', $_SESSION['user']['login']);
     ob_end_flush();
     exit();
 }
@@ -135,7 +135,7 @@ fd_menu('Commentaires', '..', $_SESSION['user']['login']);
 
 fdl_contenu($data, $resultat_form1, $resultat_form_photo);
 
-fd_pied_de_page();
+fd_pied_de_page('..', $_SESSION['user']['login']);
 
 // fin du script --> envoi de la page 
 ob_end_flush();
@@ -359,4 +359,3 @@ function fdl_verification_image($conn){
     
     return 'Fichier transféré avec succès.';
 }
-?>
