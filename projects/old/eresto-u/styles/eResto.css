@@ -178,6 +178,7 @@ h2 {
   text-align: center;
   font-size: 1.75rem;
   font-weight: bold;
+  margin-top: 2rem !important;
 }
 
 h3 {
@@ -196,9 +197,17 @@ h4 {
   font-size: 1.25rem;
 }
 
+h4.comment {
+  text-align: center;
+}
+
 p {
   margin: 1.5rem 5vw !important;
   text-align: justify;
+}
+
+p.comment {
+  margin: 0 !important;
 }
 
 strong {
@@ -464,7 +473,7 @@ main > * {
   background-color: white;
 }
 main > *:not(header) {
-  padding: 50px 10px 0px 10px;
+  padding: 2rem 10vw;
   margin-bottom: 0 !important;
 }
 
@@ -489,7 +498,7 @@ ol > li {
 
 section > h3 {
   padding-top: 35px;
-  margin-top: -35px;
+  margin-top: -5px;
 }
 
 section h4 + p {
@@ -546,7 +555,7 @@ abbr {
   text-decoration: none;
   background: radial-gradient(#ffaaaa, var(--color1));
   color: white;
-  box-shadow: 2px 2px 2px darkred;
+  box-shadow: 2px 2px 2px dark#be0d16;
 }
 
 /******************************************************************************************************************/
@@ -561,9 +570,13 @@ main > footer {
   align-content: center;
   flex-wrap: wrap;
   font-size: 1rem;
-  padding: 1rem 3vw;
+  padding: 0rem 3vw;
   color: white;
   background-color: var(--color1);
+}
+
+footer p {
+  margin: 1rem 5vw !important;
 }
 
 i.fa {
@@ -576,6 +589,34 @@ i.fa:hover {
 /******************************************************************************************************************/
 /*                                                       Components                                               */
 /******************************************************************************************************************/
+
+/** Boutons **/
+
+a.bouton {
+  border: solid #be0d16;
+  color: white;
+  background-color: #be0d16;
+  border-radius: 10px;
+  margin: 0 5vw;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+a.bouton:hover {
+  background-color: lightgrey;
+  color: #000;
+}
+
+/** Tableaux **/
+
+table {
+  margin: 0 auto;
+}
+
+table td {
+  padding-right: 1rem;
+}
 
 /** Formulaire **/
 form {
@@ -596,7 +637,7 @@ form table td:first-child:not(:only-child) {
 }
 
 form :invalid {
-  color: red;
+  color: #be0d16;
   border: solid 1px #ff7777;
   box-shadow: 2px 2px 2px #ff7777, 2px -2px 2px #ff7777, -2px 2px 2px #ff7777,
     -2px -2px 2px #ff7777;
@@ -615,18 +656,17 @@ form input[type="reset"] {
   color: black;
   background-color: lightgrey;
   border: solid 2px black;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 0.25rem !important;
   margin: 0 10px;
-  font-weight: bold;
   width: 120px;
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
 }
 form input[type="submit"]:hover,
 form input[type="reset"]:hover {
   color: white;
-  background-color: red;
+  background-color: #be0d16;
   border: solid 2px transparent;
 }
 
@@ -653,6 +693,8 @@ form input[type="file"] {
 /** Choix du menu **/
 
 .flexdiv {
+  display: flex;
+  justify-content: center;
   position: relative;
   overflow-x: auto;
   overflow-y: scroll;
@@ -701,13 +743,17 @@ form input[type="file"] {
 /** Blocs attention et notice **/
 
 .attention {
-  border: solid 2px red;
-  width: 80%;
+  /* border: solid 2px #be0d16; */
   padding: 10px;
   border-radius: 20px;
   margin: 20px auto;
+  position: relative;
 }
+
 .attention:before {
+  position: absolute;
+  bottom: 1px;
+  left: -50px;
   display: block;
   float: left;
   margin-right: 10px;
@@ -718,10 +764,10 @@ form input[type="file"] {
   border: solid 2px blue;
   background-color: blue;
   color: white;
-  width: 80%;
   padding: 10px;
   border-radius: 20px;
   margin: 20px auto;
+  text-align: center;
 }
 .notice:before {
   display: block;
@@ -820,12 +866,12 @@ article img {
 
 .erreur,
 .succes {
-  color: red;
+  color: #be0d16;
   font-size: 14px;
   font-weight: bold;
   width: 80%;
   margin: 10px auto;
-  border: solid 2px red;
+  border: solid 2px #be0d16;
   padding: 5px;
   line-height: 1.5;
 }

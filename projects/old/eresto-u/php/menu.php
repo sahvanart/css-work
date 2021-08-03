@@ -318,9 +318,9 @@ function fdl_navigation_date($jour, $mois, $annee)
     // pour faire apparaître les 3 paramètres sur l'URL
     '<form action="menu.php" method="GET" style="text-align: center;">',
     '<a href="menu.php?jour=', $dateVeille['mday'], '&mois=', $dateVeille['mon'],
-    '&annee=',  $dateVeille['year'], '" style="float: left;">Jour précédent</a>',
+    '&annee=',  $dateVeille['year'], '" class="bouton" style="float: left;">Jour précédent</a>',
     '<a href="menu.php?jour=', $dateDemain['mday'], '&mois=', $dateDemain['mon'],
-    '&annee=', $dateDemain['year'], '" style="float: right;">Jour suivant</a>',
+    '&annee=', $dateDemain['year'], '" class="bouton" style="float: right;">Jour suivant</a>',
     'Date : ';
     fd_creer_liste_nombre('jour', 1, 31, 1, $jour);
     fd_creer_liste_mois('mois', $mois);
@@ -546,7 +546,7 @@ function fdl_afficher_commentaires($conn, $date, $commOK)
 {
 
     // titre de la sous partie
-    echo '<h4 id="commentaires">Commentaires sur ce menu</h4>';
+    echo '<h4 id="commentaires" class="comment">Commentaires sur ce menu</h4>';
 
     // récupération des commentaires
     $sql =
@@ -576,7 +576,7 @@ function fdl_afficher_commentaires($conn, $date, $commOK)
 
     // s'il n'y a pas de commentaires
     $nb = count($comments);
-    if ($nb == 0) echo '<p>Pas de commentaires pour ce menu.</p>';
+    if ($nb == 0) echo '<p class="comment">Pas de commentaires pour ce menu.</p>';
     return;
 
     // calcul et affichage de la moyenne et du nombre de commentaires
