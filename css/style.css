@@ -301,7 +301,7 @@ img {
 /* "Automagic" image grid using no media queries */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   grid-gap: 4rem;
   width: 100%;
   max-width: 1280px;
