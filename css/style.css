@@ -114,6 +114,10 @@ h2 {
   font-size: 4.2rem;
 }
 
+h3 {
+  font-weight: 300;
+}
+
 ul {
   list-style: none;
 }
@@ -151,8 +155,8 @@ img {
 .nav-logo {
   display: flex;
   padding-left: 3rem;
-  font-size:  4rem;
-  font-family: 'Fuggles', cursive;
+  font-size: 4rem;
+  font-family: "Fuggles", cursive;
   align-items: center;
 }
 
@@ -260,14 +264,13 @@ img {
 
 .text {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 6rem;
-  width: 80%;
+  bottom: 7rem;
+  width: 90%;
+  text-align: left;
 }
 
 .text a > p {
-  padding-top: 4rem;
+  text-align: right;
 }
 
 .active .text-container {

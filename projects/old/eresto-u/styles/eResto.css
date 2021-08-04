@@ -590,6 +590,22 @@ i.fa:hover {
 /*                                                       Components                                               */
 /******************************************************************************************************************/
 
+/** scrollbar **/
+
+body::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: lightgrey;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #be0d16;
+  border: solid 3.5px lightgrey;
+}
+
 /** Boutons **/
 
 a.bouton {
