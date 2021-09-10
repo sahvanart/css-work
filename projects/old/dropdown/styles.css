@@ -39,9 +39,11 @@ header {
   padding: 0 1.5rem;
 }
 
-.icon {
+.ion-md-arrow-dropright,
+.ion-md-arrow-dropdown {
   padding-left: 0.75rem;
 }
+
 .menu-icons {
   color: #eee;
   font-size: 4rem;
