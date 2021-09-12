@@ -415,6 +415,7 @@ button:hover::before,
     flex: 2;
     order: 1;
     text-align: left;
+    transform: translateX(-50%);
   }
 }
 
