@@ -661,6 +661,16 @@ button:hover::before,
   align-items: center;
 }
 
+@media (max-width: 40em) {
+  .footer .attribution {
+    flex-direction: column;
+  }
+
+  .footer .attribution .dark-mode {
+    padding-top: 2rem;
+  }
+}
+
 .footer .attribution svg {
   vertical-align: sub;
 }
