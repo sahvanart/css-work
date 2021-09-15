@@ -44,7 +44,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero even">
     <div class="container">
       <div class="hero__image"></div>
 
@@ -60,7 +60,7 @@
     </div>
   </section>
 
-  <section class="feature">
+  <section class="feature odd">
     <div class="feature__content container container--pall">
       <div class="feature__intro">
         <h2>Why choose Easybank?</h2>
@@ -116,7 +116,7 @@
     </div>
   </section>
 
-  <section class="articles">
+  <section class="articles even">
     <div class="article__content container container--pall">
       <h2>Latest Articles</h2>
 
@@ -251,7 +251,18 @@
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
           class="monospace" href="">sahvanart</a>.
       </div>
-      <div class="dark-mode">Dark mode button</div>
+      <div class="dark-mode">
+        <fieldset class="toggle" aria-label="theme toggle" role="radiogroup">
+          <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
+          <div class="toggle__wrapper">
+            <input type="radio" name="theme" id="dark" />
+            <input type="radio" name="theme" id="light" />
+            <span aria-hidden="true" class="toggle__background"></span>
+            <span aria-hidden="true" class="toggle__button"></span>
+          </div>
+          <label for="light" class="visually-hidden">Dark Mode Off</label>
+        </fieldset>
+      </div>
     </div>
   </footer>
 
