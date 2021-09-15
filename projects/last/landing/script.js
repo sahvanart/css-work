@@ -46,8 +46,8 @@ const lightButton = document.getElementById('light');
 const setDarkMode = () => {
   document.querySelector('header').classList.remove('light');
   document.querySelector('header').classList.add('dark');
-  document.querySelector('section.features').classList.remove('light');
-  document.querySelector('section.features').classList.add('dark');
+  document.querySelector('section.feature').classList.remove('light');
+  document.querySelector('section.feature').classList.add('dark');
   document.querySelector('section.hero').classList.remove('light');
   document.querySelector('section.hero').classList.add('dark');
   document.querySelector('section.articles').classList.remove('light');
@@ -58,12 +58,12 @@ const setDarkMode = () => {
 const setLightMode = () => {
   document.querySelector('header').classList.remove('dark');
   document.querySelector('header').classList.add('light');
-  document.querySelector('section.features').classList.remove('dark');
-  document.querySelector('section.features').classList.add('light');
+  document.querySelector('section.feature').classList.remove('dark');
+  document.querySelector('section.feature').classList.add('light');
   document.querySelector('section.hero').classList.remove('dark');
   document.querySelector('section.hero').classList.add('light');
-  document.querySelector('section.articles').classList.remove('light');
-  document.querySelector('section.articles').classList.add('dark');
+  document.querySelector('section.articles').classList.remove('dark');
+  document.querySelector('section.articles').classList.add('light');
   localStorage.setItem('colorMode', 'light');
 };
 

@@ -30,7 +30,7 @@
   }
 }
 
-.features.light,
+.feature.light,
 header.light {
   --background: var(--light-bg-odd);
   --text-color: var(--light-text2);
@@ -39,7 +39,7 @@ header.light {
   --toggle-button: var(--toggle-button-light);
 }
 
-.features.dark,
+.feature.dark,
 header.dark {
   --background: var(--dark-bg-odd);
   --text-color: var(--dark-text1);
@@ -62,7 +62,7 @@ header.dark {
 }
 
 .hero.dark,
-article.dark {
+.articles.dark {
   --background: var(--dark-bg-even);
   --text-color: var(--dark-text1);
   --toggle: var(--light-bg);
