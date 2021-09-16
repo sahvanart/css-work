@@ -44,6 +44,7 @@ const lightButton = document.getElementById('light');
 
 
 const setDarkMode = () => {
+  document.getElementById("header__logo").src="images/logo-dark.svg";
   document.querySelector('header').classList.remove('light');
   document.querySelector('header').classList.add('dark');
   document.querySelector('section.feature').classList.remove('light');
@@ -56,6 +57,7 @@ const setDarkMode = () => {
 };
 
 const setLightMode = () => {
+  document.getElementById("header__logo").src="images/logo.svg";
   document.querySelector('header').classList.remove('dark');
   document.querySelector('header').classList.add('light');
   document.querySelector('section.feature').classList.remove('dark');
