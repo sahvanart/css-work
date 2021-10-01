@@ -145,7 +145,7 @@ header {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 125px;
 }
 
 .nav {
@@ -389,6 +389,7 @@ header {
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5em;
 }
 
 .portfolio__item {
@@ -409,7 +410,7 @@ header {
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 /* footer */
