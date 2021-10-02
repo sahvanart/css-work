@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
 :root {
   --color-white: #f3f3f3;
   --color-darkblue: #1b1b32;
   --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
   --color-lightblue: rgba(79, 96, 192, 0.7);
-  --color-green: #2F4F4F;
+  --color-green: #2f4f4f;
 }
 
 *,
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -25,7 +25,7 @@ body {
 
 /* mobile friendly alternative to using background-attachment: fixed */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@ button {
 
 .container {
   width: 100%;
-  margin: 4rem auto 0 auto;
+  margin: 4rem auto 4rem auto;
 }
 
 @media (min-width: 576px) {
@@ -150,11 +150,12 @@ form {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control:focus, .input-textarea:focus {
+.form-control:focus,
+.input-textarea:focus {
   border-radius: 0.25rem;
   border-color: #091b55;
   outline: 0;
-  box-shadow: 0 0 0 0.15rem rgba(218,165,32,0.5);
+  box-shadow: 0 0 0 0.15rem rgba(218, 165, 32, 0.5);
 }
 
 .input-radio,
@@ -170,7 +171,7 @@ form {
   width: 100%;
   padding: 0.625rem;
   resize: vertical;
-  border-radius: 0.25rem;;
+  border-radius: 0.25rem;
 }
 
 .submit-button {
@@ -191,14 +192,14 @@ form {
 /* scrollbar */
 
 body::-webkit-scrollbar {
-    width: 0.5rem;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
-    background-color: #ced4da;
+  background-color: #ced4da;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 15px;
-    background-color: var(--color-darkblue);
+  border-radius: 15px;
+  background-color: var(--color-darkblue);
 }

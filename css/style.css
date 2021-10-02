@@ -1,16 +1,14 @@
 /* Custom properties and variables  */
 :root {
   --main-purple: #32112b;
-  --dark-purple: #290822;
-  --light-purple: #49183f;
+  --dark-purple: #180313;
+  --light-purple: #2c1828;
   --main-white: azure;
-  --main-red: rgb(193, 80, 27);
   --main-blue: #5885af;
   --main-gray: #303841;
   --mid-blue: #41729f;
   --dark-blue: #274472;
   --main-yellow: #aea412;
-  --silver: #87a93e;
   --silver: rgb(206, 206, 206);
 }
 
@@ -273,18 +271,24 @@ img {
   text-align: left;
 }
 
-.text a > p {
+.text a p {
   width: 25%;
-  margin-left: auto;
-  text-align: right;
+  margin-left: 70%;
+  text-align: center;
+  transition: 300ms;
+  display: inline-block;
+}
+
+.text a p:hover {
+  letter-spacing: 1px;
   transition: 300ms;
 }
 
-.text a > p:hover {
-  letter-spacing: 1.5px;
-  transition: 300ms;
+.text i:hover {
+  color: var(--silver);
+  font-size: 2rem;
+  transition: all 300ms ease-in-out;
 }
-
 .active .text-container {
   visibility: visible;
   transform: translateY(0px);
@@ -343,7 +347,7 @@ img {
 }
 
 .project:hover .code {
-  color: #ff7f50;
+  color: var(--silver);
 }
 
 .project-image {
@@ -438,7 +442,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--main-gray);
+  background: var(--dark-purple);
   border-top: 2px solid var(--silver);
   color: var(--silver);
 }

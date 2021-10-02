@@ -1,215 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-CSS Portfolio | sahvanart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML-CSS Portfolio | sahvanart</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- START NAV -->
 
-<body>
+    <nav id="navbar" class="nav">
+      <span class="nav-logo"><a href="#welcome-section">sahvanart</a></span>
+      <ul class="nav-list">
+        <li>
+          <a href="#projects">Recent Work</a>
+        </li>
+        <li>
+          <a href="#older">Older Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-  <!-- START NAV -->
+    <!-- END NAV -->
 
-  <nav id="navbar" class="nav">
-    <span class="nav-logo"><a href="#welcome-section">sahvanart</a></span>
-    <ul class="nav-list">
-      <li>
-        <a href="#projects">Recent Work</a>
-      </li>
-      <li>
-        <a href="#older">Older Work</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
+    <!-- START WELCOME SECTION -->
+    <section id="welcome-section" class="welcome-section">
+      <h1>
+        Hey I am <span style="font-family: monospace">sahvanart,</span> web
+        developer
+      </h1>
+      <p>You will find here some of my html and css work</p>
+    </section>
 
-  <!-- END NAV -->
+    <!-- END WELCOME SECTION -->
 
-  <!-- START WELCOME SECTION -->
-  <section id="welcome-section" class="welcome-section">
-    <h1>Hey I am <span style="font-family: monospace;">sahvanart,</span> web developer</h1>
-    <p>You will find here some of my html and css work</p>
-  </section>
+    <!-- START PROJECTS SECTION -->
 
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header">Latest projects</h2>
 
-  <!-- END WELCOME SECTION -->
+      <div class="portfolio">
+        <div
+          class="image"
+          style="background: url(./img/landing.png) center/cover"
+        >
+          <div class="text-container">
+            <div class="text">
+              <h3>Landing page</h3>
+              <p>Responsive, dark mode available.</p>
+              <a href="projects/last/landing/" target="new_blank">
+                <p>Visit project</p>
+              </a>
+              <a
+                href="https://github.com/sahvanart/css-work/tree/main/projects/last/landing"
+                target="_blank"
+                ><i class="fab fa-github"></i>&ensp;</a
+              >
+            </div>
+          </div>
+        </div>
 
-  <!-- START PROJECTS SECTION -->
+        <div
+          class="image"
+          style="background: url(./img/portfolio.png) center/cover"
+        >
+          <div class="text-container">
+            <div class="text">
+              <h3>Portfolio page</h3>
+              <p>Responsive and customizable.</p>
+              <a href="projects/last/portfolio/" target="new_blank">
+                <p>Visit project</p>
+              </a>
+              <a
+                href="https://github.com/sahvanart/css-work/tree/main/projects/last/landing"
+                target="_blank"
+                ><i class="fab fa-github"></i>&ensp;</a
+              >
+            </div>
+          </div>
+        </div>
 
-  <section id="projects" class="projects-section">
-    <h2 class="projects-section-header">Latest projects</h2>
+        <div
+          class="image active"
+          style="background: url(img/cards.png) center/cover"
+        >
+          <div class="text-container">
+            <div class="text">
+              <h3>Cards</h3>
+              <p>Just hover them.</p>
+              <a href="projects/last/cards/" target="new_blank">
+                <p>Visit project</p>
+              </a>
+              <a
+                href="https://github.com/sahvanart/css-work/tree/main/projects/last/cards"
+                target="_blank"
+                ><i class="fab fa-github"></i>&ensp;</a
+              >
+            </div>
+          </div>
+        </div>
 
-    <div class="portfolio">
+        <div
+          class="image"
+          style="background: url(./img/survey.png) center/cover"
+        >
+          <div class="text-container">
+            <div class="text">
+              <h3>Survey Form</h3>
+              <p>Responsive.</p>
+              <a href="projects/last/survey/" target="new_blank">
+                <p>Visit project</p>
+              </a>
+              <a
+                href="https://github.com/sahvanart/css-work/tree/main/projects/last/survey"
+                target="_blank"
+                ><i class="fab fa-github"></i>&ensp;</a
+              >
+            </div>
+          </div>
+        </div>
 
-      <div class="image" style="background: url(./img/landing.png) center/cover;">
-        <div class="text-container">
-          <div class="text">
-            <h3>Landing page</h3>
-            <p>Responsive, dark mode available.</p>
-            <a href="projects/last/landing/" target="new_blank">
-              <p>Visit project<p>
-            </a>
+        <div
+          class="image"
+          style="background: url(./img/dropdown.png) center/cover"
+        >
+          <div class="text-container">
+            <div class="text">
+              <h3>Dropdown menu</h3>
+              <p>3 levels.</p>
+              <a href="projects/last/dropdown/" target="new_blank">
+                <p>Visit project</p>
+              </a>
+              <a
+                href="https://github.com/sahvanart/css-work/tree/main/projects/last/dropdown"
+                target="_blank"
+                ><i class="fab fa-github"></i>&ensp;</a
+              >
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="image" style="background: url(./img/portfolio.png) center/cover;">
-        <div class="text-container">
-          <div class="text">
-            <h3>Portfolio page</h3>
-            <p>Responsive.</p>
-            <a href="projects/last/portfolio/" target="new_blank">
-              <p>Visit project<p>
-            </a>
-          </div>
-        </div>
+    <section id="older" class="projects-section">
+      <h2 class="projects-section-header">First projects</h2>
+
+      <div class="projects-grid">
+        <a
+          href="http://simeon.lorieux.free.fr/vanilla-js/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="img/vanilla-js.png"
+            alt="survey project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            vanilla js work &mdash; css grid
+            <span class="code">&gt;</span>
+          </p>
+        </a>
+
+        <a
+          href="http://www.canyoning-bourbon.re/new/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="img/vwr.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            vwr enterprise website &mdash; bootstrap 5 + sass
+            <span class="code">&gt;</span>
+          </p>
+        </a>
+        <a
+          href="http://simeon.lorieux.free.fr/mapdisto/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="img/mapdisto.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Mapdisto genetics software &mdash; bootstrap 5
+            <span class="code">&gt;</span>
+          </p>
+        </a>
+        <a
+          href="http://psygrenoblesud.free.fr/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="img/psygrenoblesud.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            For a psychologist's office &mdash; from scratch
+            <span class="code">&gt;</span>
+          </p>
+        </a>
+        <a
+          href="http://simeon.lorieux.free.fr/eresto-u/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="img/erestou.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Eresto-U : a fictive canteen &mdash; responsive
+            <span class="code">&gt;</span>
+          </p>
+        </a>
+        <a
+          href="simeon.lorieux.free.fr/first/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="img/first-css-cv.png"
+            alt="first project ever"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            My first website &mdash; not responsive
+            <span class="code">&gt;</span>
+          </p>
+        </a>
       </div>
 
-      <div class="image active" style="background: url(img/cards.png) center/cover;">
-        <div class="text-container">
-          <div class="text">
-            <h3>Cards</h3>
-            <p>First 2 are responsive.</p>
-            <a href="projects/last/cards/" target="new_blank">
-              <p>Visit project<p>
-            </a>
-          </div>
-        </div>
+      <a
+        href="https://codepen.io/sahvanart/"
+        class="btn btn-show-all"
+        target="_blank"
+        >codepen work<i class="fas fa-chevron-right"></i
+      ></a>
+    </section>
+
+    <!-- END PROJECTS SECTION -->
+
+    <!-- START CONTACT SECTION -->
+
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>Let's work together</h2>
+        <p>Check projects' codes on github</p>
       </div>
-
-      <div class="image" style="background: url(./img/survey.png) center/cover;">
-        <div class="text-container">
-          <div class="text">
-            <h3>Survey Form</h3>
-            <p>Responsive. Inspired from freecodecamp.</p>
-            <a href="projects/last/survey/" target="new_blank">
-              <p>Visit project<p>
-            </a>
-          </div>
-        </div>
+      <div class="contact-links">
+        <a href="mailto:sahvanart@gmail.com" class="btn contact-details"
+          ><i class="fas fa-at"></i>&ensp;Email</a
+        >
+        <a
+          id="profile-link"
+          href="https://github.com/sahvanart"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-github"></i>&ensp;GitHub</a
+        >
+        <a
+          href="https://twitter.com/sahvanart"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-twitter"></i>&ensp;Twitter</a
+        >
       </div>
+    </section>
 
-      <div class="image" style="background: url(./img/dropdown.png) center/cover;">
-        <div class="text-container">
-          <div class="text">
-            <h3>Dropdown menu</h3>
-            <p>3 levels.</p>
-            <a href="projects/last/dropdown/" target="new_blank">
-              <p>Visit project<p>
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- END CONTACT SECTION -->
 
-    </div>
-  </section>
+    <!-- START FOOTER SECTION -->
 
-  <section id="older" class="projects-section">
-    <h2 class="projects-section-header">First projects</h2>
+    <footer>
+      <p>
+        Created during
+        <a href="https://www.freecodecamp.com/" target="_blank"
+          >freeCodeCamp<i class="fab fa-free-code-camp"></i
+        ></a>
+        responsive web design certification
+      </p>
+      <p>&copy; 2021 sahvanart</p>
+    </footer>
 
-    <div class="projects-grid">
-      <a href="#" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/vanilla-js.png" alt="survey project" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          JS work &mdash; using css grid
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-      <a href="http://www.canyoning-bourbon.re/new/" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/vwr.png" alt="project" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          VWR enterprise
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-      <a href="http://mapdisto.free.fr/mapdisto2/" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/mapdisto.png" alt="project" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Mapdisto genetics software
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-      <a href="http://psygrenoblesud.free.fr/" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/psygrenoblesud.png" alt="project" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          For a psychologist's office
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-      <a href="http://simeon.lorieux.free.fr/eresto-u/" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/erestou.png" alt="project" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Eresto-U : a fictive canteen
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-      <a href="simeon.lorieux.free.fr/first/" target="_blank" class="project project-tile">
-        <img class="project-image" src="img/first-css-cv.png" alt="first project ever" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          My first website
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-    </div>
-
-    <a href="https://codepen.io/sahvanart/" class="btn btn-show-all" target="_blank">codepen work<i
-        class="fas fa-chevron-right"></i></a>
-  </section>
-
-  <!-- END PROJECTS SECTION -->
-
-  <!-- START CONTACT SECTION -->
-
-  <section id="contact" class="contact-section">
-    <div class="contact-section-header">
-      <h2>Let's work together</h2>
-      <p>How do you take your coffee?</p>
-    </div>
-    <div class="contact-links">
-      <a href="mailto:sahvanart@gmail.com" class="btn contact-details"><i class="fas fa-at"></i>&ensp;Email</a>
-      <a id="profile-link" href="https://github.com/sahvanart" target="_blank" class="btn contact-details"><i
-          class="fab fa-github"></i>&ensp;GitHub</a>
-      <a href="https://twitter.com/sahvanart" target="_blank" class="btn contact-details"><i
-          class="fab fa-twitter"></i>&ensp;Twitter</a>
-    </div>
-  </section>
-
-  <!-- END CONTACT SECTION -->
-
-  <!-- START FOOTER SECTION -->
-
-  <footer>
-    <p>
-      Created during
-      <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp<i class="fab fa-free-code-camp"></i></a>
-      responsive web design certification
-    </p>
-    <p>
-      &copy; 2021 sahvanart
-    </p>
-  </footer>
-
-  <!-- END FOOTER SECTION -->
-  <script src="js/jquery.min.js" type="text/javascript"></script>
-  <script src="js/script.js" type="text/javascript"></script>
-</body>
-
+    <!-- END FOOTER SECTION -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
 </html>
