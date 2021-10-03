@@ -8,7 +8,7 @@
   --main-gray: #303841;
   --mid-blue: #41729f;
   --dark-blue: #274472;
-  --main-yellow: #aea412;
+  --main-yellow: #b99a10;
   --silver: rgb(206, 206, 206);
 }
 
@@ -228,7 +228,7 @@ img {
   min-width: 8rem;
   margin: 0.75rem;
   cursor: pointer;
-  transition: 0.5s cubic-bezier(0.05, 0.6, 0.4, 0.95);
+  transition: 700ms cubic-bezier(0.05, 0.6, 0.4, 0.95);
   overflow: hidden;
   position: relative;
   border-radius: 0.5rem transparent;
@@ -294,7 +294,7 @@ img {
   transform: translateY(0px);
   opacity: 1;
 }
-/**********************************************************************************************************************/
+/********************************************************************************************/
 
 .projects-section {
   text-align: center;
@@ -339,6 +339,11 @@ img {
   background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  border: 2px solid transparent;
+}
+
+.project:hover {
+  border: 2px solid var(--main-yellow);
 }
 
 .code {
@@ -427,7 +432,7 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: 1px 1px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
 }
 
